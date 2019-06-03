@@ -98,9 +98,9 @@ void showSum(Lista * l1, Lista * l2){
 		}		
 	}
 	
-//	while(!ler_pos(l3, 0)){
-//		remover_primeiro(l3);
-//	}
+	while(!ler_pos(l3, 0)){
+		remover_primeiro(l3);
+	}
 }
 
 void showProduct(){
@@ -125,7 +125,6 @@ void showProduct(){
 				if(prod >= 10){
 					inserir_primeiro(aux1, prod%10);				
 					carriage = (int) (prod/10)%10;
-					//if(tamanho(l2) > 2) j++;
 				}
 				else{
 					if(!(j == 0 && prod == 0))
@@ -142,6 +141,7 @@ void showProduct(){
 				inserir_ultimo(aux1, 0);
 				showSum(aux1, aux2);
 				aux2 = clone(l3);
+				remover_ultimo(aux2);
 				limpar(aux1);
 			}
 		}
@@ -157,7 +157,6 @@ void showProduct(){
 				if(prod >= 10){
 					inserir_primeiro(aux1, prod%10);				
 					carriage = (int) (prod/10)%10;
-					//if(tamanho(l2) > 2) j++;
 				}
 				else{
 					if(!(j == 0 && prod == 0))
@@ -174,6 +173,7 @@ void showProduct(){
 				inserir_ultimo(aux1, 0);
 				showSum(aux1, aux2);
 				aux2 = clone(l3);
+				remover_ultimo(aux2);
 				limpar(aux1);
 			}
 		}
@@ -186,7 +186,7 @@ void showProduct(){
 	while(!ler_pos(l2, 0)){
 		remover_primeiro(l2);
 	}
-		
+	
 	showSum(aux1, aux2);
 
 	destruir(aux1);
